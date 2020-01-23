@@ -1,7 +1,7 @@
-import { MenuItem } from "types";
+import { MenuItemType } from "types";
 
 export const paths: {
-  [key: string]: MenuItem;
+  [key: string]: MenuItemType;
 } = {
   login: {
     title: "Login",

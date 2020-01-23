@@ -16,7 +16,7 @@ export function unAuth(): void {
   return remove(AuthKey);
 }
 
-export function auth(user: types.User): void {
+export function auth(user: types.UserType): void {
   save(AuthKey, user, 24 * 60);
 }
 

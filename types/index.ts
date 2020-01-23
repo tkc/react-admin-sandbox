@@ -6,7 +6,7 @@ export interface MenuBaseType {
   isMenuList: boolean;
 }
 
-export interface MenuItem extends MenuBaseType {
+export interface MenuItemType extends MenuBaseType {
   children?: MenuBaseType[];
 }
 
@@ -14,7 +14,7 @@ export interface MenuDividerType {
   divider: boolean;
 }
 
-export type MenuType = MenuItem | MenuDividerType;
+export type MenuType = MenuItemType | MenuDividerType;
 
 export interface UserType {
   name: string;
@@ -26,21 +26,14 @@ export type UserRoleTypeAdmin = "admin";
 export type UserRoleTypeMember = "member";
 export type UserRoleType = UserRoleTypeAdmin | UserRoleTypeMember;
 
-export interface User {
-  name: string;
-  id: number;
-  email: string;
-  role: UserRoleType;
-}
-
-export interface AccountTableRow {
+export interface AccountTableRowType {
   id: number;
   name: string;
   role: UserRoleType;
   details: string;
 }
 
-export interface CompanyTableRow {
+export interface CompanyTableRowType {
   id: number;
   name: string;
   address: string;
