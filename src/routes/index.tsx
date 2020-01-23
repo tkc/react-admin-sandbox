@@ -16,8 +16,6 @@ export const Routes = (
     <PrivateRoute exact path={paths.ignoreKeyword.url} component={() => <pages.notFound />} />
     <PrivateRoute exact path={paths.recruitment.url} component={() => <pages.notFound />} />
     <PrivateRoute exact path={paths.application.url} component={() => <pages.notFound />} />
-    <PrivateRoute exact path={paths.occupation.url} component={() => <pages.notFound />} />
-    <PrivateRoute exact path={paths.plan.url} component={() => <pages.notFound />} />
     <Redirect to={paths.login.url ? paths.login.url : "login"} />
   </Switch>
 );
