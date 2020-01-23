@@ -4,7 +4,7 @@ import ReactDOM from "react-dom";
 import { store } from "./store";
 import { App } from "./components/app";
 import * as serviceWorker from "./service-worker";
-import "./assets/styles/app/global.scss";
+import "./assets/style/app/global.scss";
 
 serviceWorker.register();
 
