@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { MainLayout, MainLayoutProps } from "../../layouts/Main";
+import { MainLayout, MainLayoutProps } from "../../layouts/basic";
 import { AccountForm, AccountFormProps } from "./form";
 
 export interface OwnState {}

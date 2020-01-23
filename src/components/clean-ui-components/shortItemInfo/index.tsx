@@ -1,7 +1,15 @@
-import React from "src/components/clean-ui-components/shortItemInfo/node_modules/react";
+import React from "react";
 import styles from "./style.module.scss";
 
-class ShortItemInfo extends React.Component {
+export interface ShortItemInfoProps {
+  actionData: any;
+  name: string;
+  note: string;
+  img: string;
+  size: string;
+}
+
+export class ShortItemInfo extends React.Component<ShortItemInfoProps> {
   render() {
     const { actionData, name, note, img, size } = this.props;
 
@@ -21,5 +29,3 @@ class ShortItemInfo extends React.Component {
     );
   }
 }
-
-export default ShortItemInfo;

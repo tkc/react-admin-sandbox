@@ -1,8 +1,8 @@
-import React from "src/components/layout-components/loader/node_modules/react";
-import classNames from "src/components/layout-components/loader/node_modules/classnames";
+import React from "react";
+import classNames from "classnames";
 import styles from "./style.module.scss";
 
-const Loader = ({ spinning = true, fullScreen }) => (
+const Loader = ({ spinning = true, fullScreen }: { spinning: boolean; fullScreen: boolean }) => (
   <div
     className={classNames(styles.loader, {
       [styles.hidden]: !spinning,

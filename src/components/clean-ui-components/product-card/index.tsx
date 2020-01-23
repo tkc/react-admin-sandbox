@@ -1,6 +1,6 @@
 import React from "react";
 import { Tooltip } from "antd";
-import data from "./data.json.js.js";
+import data from "./data.json";
 import styles from "./style.module.scss";
 
 class ProductCard extends React.Component {

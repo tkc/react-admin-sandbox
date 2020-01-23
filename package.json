@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=local webpack --mode development --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --mode production --config webpack.config.build.prod.js",
-    "lint": "tslint \"src/**/*\" -e \"src/**/*.snap\" -e \"src/**/*.d.ts\" -e \"src/**/*.svg\"",
+    "lint": "tslint \"src/**/*\" -e \"src/**/*.snap\" -e \"src/**/*.d.ts\" -e \"src/**/*.svg\" -e \"src/**/*.scss\" -e \"src/**/*.jsons\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,less}\"",
     "serve": "webpack-dev-server --config webpack.config.serve.local.js",
     "start": "npm run serve",
@@ -35,21 +35,15 @@
     "antd": "^3.26.7",
     "aws-sdk": "^2.518.0",
     "axios": "0.19.0",
-    "bootstrap": "^4.4.1",
     "c3": "^0.7.12",
-    "canvas": "^2.6.0",
     "clipboard-copy": "^3.1.0",
     "connected-react-router": "^4.4.1",
-    "cornerstone-core": "^2.2.4",
-    "cornerstone-math": "^0.1.6",
-    "cornerstone-wado-image-loader": "^3.0.0",
     "css-modules-typescript-loader": "^4.0.0",
     "dicom-parser": "^1.8.1",
     "encoding-japanese": "^1.0.29",
     "faker": "^4.1.0",
     "formik": "1.5.8",
     "fp-ts": "2.3.1",
-    "hammerjs": "^2.0.8",
     "history": "^4.10.1",
     "jest-canvas-mock": "^2.1.1",
     "js-tree": "^2.0.1",
@@ -75,10 +69,8 @@
     "react-transition-group": "^4.3.0",
     "react-virtualized": "^9.21.2",
     "redux": "4.0.4",
-    "redux-saga": "^1.1.3",
     "redux-thunk": "^2.3.0",
     "save": "^2.4.0",
-    "semantic-ui-react": "0.88.2",
     "store": "^2.0.12",
     "storybook": "^5.1.11",
     "styled-components": "4.4.1",
@@ -151,7 +143,6 @@
     "react-test-renderer": "16.12.0",
     "redux-logger": "^3.0.6",
     "sass-loader": "^8.0.2",
-    "semantic-ui-css": "2.4.1",
     "spdx-license-ids": "3.0.5",
     "style-loader": "^1.1.3",
     "ts-jest": "23.10.5",
@@ -165,10 +156,6 @@
     "webpack-serve": "3.1.0"
   },
   "jest": {
-    "setupFiles": [
-      "./mocks/browser.ts",
-      "jest-canvas-mock"
-    ],
     "moduleNameMapper": {
       "\\.svg": "<rootDir>/mocks/icon-mock.tsx"
     },

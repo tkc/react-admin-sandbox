@@ -1,13 +1,12 @@
 import React from "react";
 import { Table, Button, Icon } from "antd";
-import invoiceData from "./data.json.js";
+import invoiceData from "./data.json";
 
 class Invoice extends React.Component {
   state = {
     data: invoiceData.invoiceData,
     tableData: invoiceData.invoiceData.invoiceContent,
   };
-
   render() {
     const columns = [
       {

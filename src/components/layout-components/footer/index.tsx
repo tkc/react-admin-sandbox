@@ -1,4 +1,4 @@
-import React from "src/components/layout-components/footer/node_modules/react";
+import React from "react";
 import styles from "./style.module.scss";
 
 export function Footer(props: any) {

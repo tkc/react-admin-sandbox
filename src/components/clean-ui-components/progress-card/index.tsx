@@ -1,12 +1,18 @@
 import React from "react";
 import { Progress } from "antd";
-
 import styles from "./style.module.scss";
 
-class ProgressCard extends React.Component {
+export interface ProgressCardProps {
+  title: string;
+  note: string;
+  currentValue: string;
+  percent: string;
+  dataColor: string;
+}
+
+class ProgressCard extends React.Component<ProgressCardProps> {
   render() {
     const { title, note, currentValue, percent, dataColor } = this.props;
-
     return (
       <div className="card">
         <div className="card-body">

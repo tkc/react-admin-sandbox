@@ -1,7 +1,7 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import { Button } from "antd";
-import { MainLayout, MainLayoutProps } from "../../layouts/Main";
+import { MainLayout, MainLayoutProps } from "../../layouts/basic";
 import { AccountTable, AccountTableProps } from "./table";
 
 export interface OwnState {}

@@ -1,18 +1,18 @@
 import React from "react";
-import { stats, commerceStats } from "./data.json.js.js";
+import { stats, commerceStats } from "./data.json";
 import styles from "./style.module.scss";
 
-class InfoCard extends React.Component {
-  static defaultProps = {
-    form: "stats",
-    icon: "bullhorn",
-    type: "",
-    btnType: "default",
-  };
+export interface InfoCardProps {
+  form: string;
+  icon: boolean;
+  type: string;
+  btnType: string;
+}
 
+class InfoCard extends React.Component<InfoCardProps> {
   render() {
     const { form, icon, btnType, type } = this.props;
-    const className = `${styles.infoCard} ${type.length > 0 ? styles[type] : ""}`;
+    const className = `${styles.infoCard}`;
     return (
       <div>
         {form === "stats" && (

@@ -3,8 +3,8 @@ import { Button, Table } from "antd";
 import { Helmet } from "react-helmet";
 import PaymentAccount from "../../../clean-ui-components/payment-account";
 import PaymentTransaction from "../../../clean-ui-components/payment-transaction";
-import ChartCard from "../../../clean-ui-components/chart=card";
-import { MainLayout, MainLayoutProps } from "../../../layouts/Main";
+import ChartCard from "../../../clean-ui-components/chart-card";
+import { MainLayout, MainLayoutProps } from "../../../layouts/basic";
 
 const tableColumns = [
   {

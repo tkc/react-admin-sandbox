@@ -9,6 +9,9 @@ interface OwnProps {}
 const mergeProps = (state: State, { dispatch }: { dispatch: Dispatch }, ownProps: OwnProps): AccountEditProps => {
   return {
     mainLayoutProps: CreateMenuProps(state, { dispatch }),
+    accountFormProps: {
+      onSubmit: (id: number) => {},
+    },
   };
 };
 

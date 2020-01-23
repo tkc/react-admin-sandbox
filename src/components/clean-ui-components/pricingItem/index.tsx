@@ -1,19 +1,23 @@
 import React from "react";
-import item from "./data.json.js";
+import item from "./data.json";
 import styles from "./style.module.scss";
 
-class PricingItem extends React.Component {
+export interface PricingItemProps {
+  data: any;
+  extended: string;
+  type: string;
+}
+
+class PricingItem extends React.Component<PricingItemProps> {
   static defaultProps = {
     data: item.item,
     type: "",
     extended: false,
   };
-
   render() {
     const { data, extended, type } = this.props;
-
     return (
-      <div className={`${styles.item}  ${extended ? styles.extended : ""} ${type ? styles[type] : ""}`}>
+      <div className={`${styles.item}  ${extended ? styles.extended : ""}`}>
         <div className={styles.header}>
           <div className={styles.price}>
             <span className={styles.currency}>{data.currency}</span>
@@ -23,7 +27,7 @@ class PricingItem extends React.Component {
           <div className={styles.title}>{data.title}</div>
         </div>
         <ul className={styles.features}>
-          {data.features.map(feature => (
+          {data.features.map((feature: any) => (
             <li key={feature.id}>
               <strong>{feature.main}</strong> {feature.descr}
             </li>

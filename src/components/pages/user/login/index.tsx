@@ -1,8 +1,8 @@
-import { Form, Input, Button, Checkbox } from "antd";
+import { Form, Input, Button } from "antd";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.scss";
 import * as React from "react";
-import { LoginLayout } from "../../../layouts/Login";
+import { LoginLayout } from "../../../layouts/login";
 
 export interface OwnState {}
 
@@ -15,6 +15,7 @@ export class Login extends React.PureComponent<LoginProps, OwnState> {
   constructor(props: LoginProps) {
     super(props);
   }
+
   render() {
     return (
       <LoginLayout>
@@ -40,10 +41,6 @@ export class Login extends React.PureComponent<LoginProps, OwnState> {
                       </Form.Item>
                       <Form.Item label="Password">
                         <Input size="default" type="password" />
-                      </Form.Item>
-                      <Form.Item>
-                        <Checkbox>Remember me</Checkbox>
-                        Forgot password?
                       </Form.Item>
                       <div className="form-actions">
                         <Button

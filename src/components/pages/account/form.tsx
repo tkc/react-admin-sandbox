@@ -1,13 +1,12 @@
 import React from "react";
 import { Input, TreeSelect, Select, Button, Form } from "antd";
 import { Helmet } from "react-helmet";
+import * as types from "types";
 
 const { TreeNode } = TreeSelect;
 const { Option } = Select;
 const { TextArea } = Input;
 const FormItem = Form.Item;
-
-import * as types from "types";
 
 export interface AccountFormProps {
   onSubmit: (id: number) => void;
