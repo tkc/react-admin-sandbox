@@ -2,7 +2,7 @@ import { Form, Input, Button } from "antd";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.scss";
 import * as React from "react";
-import { LoginLayout } from "../../../layouts/login";
+import { LoginLayout } from "../../../layouts/login-page";
 
 export interface OwnState {}
 
