@@ -6,7 +6,7 @@
   "scripts": {
     "build": "NODE_ENV=local webpack --mode development --config webpack.config.js",
     "build:prod": "NODE_ENV=production webpack --mode production --config webpack.config.build.prod.js",
-    "lint": "tslint \"src/**/*\" -e \"src/**/*.snap\" -e \"src/**/*.d.ts\" -e \"src/**/*.svg\" -e \"src/**/*.scss\" -e \"src/**/*.jsons\"",
+    "lint": "tslint \"src/**/*\" -e \"src/**/*.snap\" -e \"src/**/*.d.ts\" -e \"src/**/*.svg\" -e \"src/**/*.scss\" -e \"src/**/*.json\"",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,scss,less}\"",
     "serve": "webpack-dev-server --config webpack.config.serve.local.js",
     "start": "npm run serve",
