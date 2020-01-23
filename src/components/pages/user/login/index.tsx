@@ -51,6 +51,7 @@ export class Login extends React.PureComponent<LoginProps, OwnState> {
                           className="width-150 mr-4"
                           htmlType="submit"
                           loading={this.props.loading}
+                          onClick={this.props.onSubmit}
                         >
                           Login
                         </Button>

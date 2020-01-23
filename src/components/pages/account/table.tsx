@@ -84,22 +84,26 @@ const list: types.AccountTableRow[] = [
   },
 ];
 
-export const AccountTable = () => {
+export interface AccountTableProps {
+  onclickEdit: (id: number) => void;
+}
+
+export function AccountTable(props: AccountTableProps) {
   const rowGetter = ({ index }: Index) => list[index % list.length];
 
-  const headerRenderer = (props: TableHeaderProps) => {
-    return <div>{props.label}</div>;
+  const headerRenderer = (param: TableHeaderProps) => {
+    return <div>{param.label}</div>;
   };
 
-  const cellButtonRenderer = (props: TableCellProps) => {
-    const { columnIndex, rowData } = props;
+  const cellButtonRenderer = (param: TableCellProps) => {
+    const { columnIndex, rowData } = param;
     return (
       <Button
         type="primary"
         htmlType="submit"
         style={{ cursor: "pointer" }}
         onClick={() => {
-          alert(rowData.id);
+          props.onclickEdit(rowData.id);
         }}
         key={columnIndex}
       >
@@ -143,4 +147,4 @@ export const AccountTable = () => {
       </div>
     </>
   );
-};
+}

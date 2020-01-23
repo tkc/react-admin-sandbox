@@ -42,8 +42,10 @@ module.exports = {
     alias: {
       src: path.resolve (__dirname, './src'),
       types: path.resolve (__dirname, './types'),
+      models: path.resolve (__dirname, './models'),
       assets: path.resolve (__dirname, './assets'),
       mock: path.resolve (__dirname, './mock'),
+      usecase: path.resolve (__dirname, './src/usecase/'),
     },
   },
   performance: {hints: false},

@@ -1,5 +1,5 @@
 import * as React from "react";
-import { BrowserRouter, Route, Switch, Redirect } from "react-router-dom";
+import { Route, Switch, Redirect } from "react-router-dom";
 import * as pages from "./loadables";
 import { paths } from "./paths";
 import { PrivateRoute } from "src/routes//private-router";
@@ -10,6 +10,8 @@ export const Routes = (
     <PrivateRoute exact path={paths.login.url} component={() => <pages.Dashboard />} />
     <PrivateRoute exact path={paths.dashboard.url} component={() => <pages.Dashboard />} />
     <PrivateRoute exact path={paths.account.url} component={() => <pages.Account />} />
+    <PrivateRoute exact path={paths.accountNew.url} component={() => <pages.AccountNew />} />
+    <PrivateRoute exact path={paths.accountEdit.url} component={() => <pages.AccountEdit />} />
     <PrivateRoute exact path={paths.company.url} component={() => <pages.Company />} />
     <PrivateRoute exact path={paths.ignoreKeyword.url} component={() => <pages.notFound />} />
     <PrivateRoute exact path={paths.recruitment.url} component={() => <pages.notFound />} />

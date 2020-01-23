@@ -24,6 +24,20 @@ export const paths: {
     icon: "icmn icmn-home",
     isMenuList: true,
   },
+  accountNew: {
+    title: "Account_new",
+    key: "account_new",
+    url: "/account_new",
+    icon: "icmn icmn-home",
+    isMenuList: false,
+  },
+  accountEdit: {
+    title: "Account_edit",
+    key: "account_edit",
+    url: "/account_edit",
+    icon: "icmn icmn-home",
+    isMenuList: false,
+  },
   company: {
     title: "Company",
     key: "company",

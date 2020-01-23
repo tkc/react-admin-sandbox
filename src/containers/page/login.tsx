@@ -1,14 +1,17 @@
 import { connect } from "react-redux";
 import { Dispatch } from "redux";
-import { State } from "../../redux/reducers";
+import { State } from "../../reducers";
 import { Login, LoginProps } from "../../components/pages/user/login";
+import * as usecase from "../../usecase";
 
 interface OwnProps {}
 
 const mergeProps = (state: State, { dispatch }: { dispatch: Dispatch }, ownProps: OwnProps): LoginProps => {
   return {
     loading: false,
-    onSubmit: () => {},
+    onSubmit: () => {
+      usecase.login(dispatch, {});
+    },
   };
 };
 
