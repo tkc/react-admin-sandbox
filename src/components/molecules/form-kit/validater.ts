@@ -3,7 +3,7 @@ export const messages = {
   inputValidEmail: () => "メールアドレスの形式が違います。",
   inputValidPassword: () => "Please enter 8-20 alphanumeric characters.",
   inputValidConfirmPassword: () => "Passwords do not match.",
-  maxLength: (num: number) => "${num}文字いないで入力してください。",
+  maxLength: (num: number) => `${num}文字以内で入力してください。`,
 };
 
 const isValidAlphaNumeric = (val: string) => /^[a-zA-Z0-9_+-]{1,40}$/i.test(val);
