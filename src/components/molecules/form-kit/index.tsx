@@ -12,13 +12,14 @@ export const validater = validate;
 export interface InputPropsBase {
   name: string;
   renderProps: FormikProps<any>;
-  validater: (value: string) => string | undefined;
+  validater?: (value: string) => string | undefined;
   placeholder?: string;
 }
 
 export interface InputProps extends InputPropsBase {
   size: "small" | "default" | "large";
   type: "password" | "text" | "email";
+  defaultValue: string;
 }
 
 export function input(props: InputProps) {
@@ -34,7 +35,7 @@ export function input(props: InputProps) {
             size={props.size}
             onBlur={props.renderProps.handleBlur}
             onChange={props.renderProps.handleChange}
-            defaultValue={props.renderProps.values.password}
+            defaultValue={props.defaultValue}
             placeholder={props.placeholder}
           />
         );
@@ -46,6 +47,7 @@ export function input(props: InputProps) {
 export interface TextAreaProps extends InputPropsBase {
   type: "password" | "text" | "email";
   rows: number;
+  defaultValue: string;
 }
 
 export function textArea(props: TextAreaProps) {
@@ -60,7 +62,7 @@ export function textArea(props: TextAreaProps) {
             name={props.name}
             onBlur={props.renderProps.handleBlur}
             onChange={props.renderProps.handleChange}
-            defaultValue={props.renderProps.values.password}
+            defaultValue={props.defaultValue}
             placeholder={props.placeholder}
             rows={props.rows}
           />
@@ -71,7 +73,6 @@ export function textArea(props: TextAreaProps) {
 }
 
 export interface SelectInputProps extends InputPropsBase {
-  defaultValue: string | null;
   options: { key: string; value: string }[];
 }
 

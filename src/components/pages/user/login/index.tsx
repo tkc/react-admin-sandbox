@@ -53,6 +53,7 @@ export const Login = (props: LoginProps) => {
                             validater: FormKit.validater.validateEmail(),
                             size: "default",
                             type: "email",
+                            defaultValue: "",
                           })}
                           {FormKit.erroeMessage({ name: "email", renderProps })}
                         </Form.Item>
@@ -63,6 +64,7 @@ export const Login = (props: LoginProps) => {
                             validater: FormKit.validater.validatePaaword(),
                             size: "default",
                             type: "password",
+                            defaultValue: "",
                           })}
                           {FormKit.erroeMessage({ name: "password", renderProps })}
                         </Form.Item>
