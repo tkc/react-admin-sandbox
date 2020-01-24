@@ -1,9 +1,11 @@
 import { validatePaaword, messages } from "./validater";
 
 test("should message false by password validator", () => {
-  expect(validatePaaword("")).toEqual(messages.inputRequired());
+  const validatePaawordIns = validatePaaword();
+  expect(validatePaawordIns("")).toEqual(messages.inputRequired());
 });
 
 test("should undefined true by password validator", () => {
-  expect(validatePaaword("password")).toBeUndefined();
+  const validatePaawordIns = validatePaaword();
+  expect(validatePaawordIns("")).toBeUndefined();
 });
