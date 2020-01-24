@@ -4,12 +4,6 @@
 
 # React Admin
 
-## Local Serve 
-
-```
-yarn staet
-```
-
 ## Requirements
 
 ### Node.js
@@ -19,44 +13,38 @@ nvm install v10.x.x
 nvm use v10.x.x
 ```
 
-### Yarn
-
-```sh
-brew install yarn
-```
-
 ## Development
 
 ```sh
-yarn start
+npm run start
 ```
 
 ## Test
 
 ```sh
-yarn test
+npm run test
 ```
 
 ### TypeScript compilation check
 
 ```sh
-yarn tsc
+npm run tsc
 ```
 
 ### Lint
 
 ```sh
-yarn lint
+npm run lint
 ```
 
 ### Build Development
 
 ```sh
-yarn build
+npm run build
 ```
 
 ### Build production
 
 ```sh
-build:prod
+npm run build:prod
 ```
