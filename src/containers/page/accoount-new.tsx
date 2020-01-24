@@ -11,6 +11,7 @@ const mergeProps = (state: State, { dispatch }: { dispatch: Dispatch }, ownProps
     mainLayoutProps: CreateMenuProps(state, { dispatch }),
     accountFormProps: {
       onSubmit: (id: number) => {},
+      loading: false,
     },
   };
 };

@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import { MainLayout, MainLayoutProps } from "../../layouts/basic";
+import { MainLayout, MainLayoutProps } from "../../template/basic";
 import { AccountTable } from "./table";
 
 export interface OwnState {}
