@@ -1,9 +1,10 @@
-import { Form, Input, Button } from "antd";
+import { Form } from "antd";
 import { Helmet } from "react-helmet";
 import styles from "./style.module.scss";
 import * as React from "react";
 import { LoginLayout } from "../../../template/login-page";
-import { Formik, FormikProps, FormikActions, Field } from "formik";
+import { Formik, FormikProps, FormikActions } from "formik";
+import * as FormKit from "../../../molecules/form-kit";
 
 export interface FormValues {
   email: string;
@@ -13,24 +14,6 @@ export interface FormValues {
 export interface LoginProps {
   onSubmit: (param: FormValues) => void;
   loading: boolean;
-}
-
-function validateEmail(value: string) {
-  let error;
-  if (!value) {
-    error = "Required";
-  } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)) {
-    error = "Invalid email address";
-  }
-  return error;
-}
-
-function validatePaaword(value: string) {
-  let error;
-  if (!value) {
-    error = "Required";
-  }
-  return error;
 }
 
 export const Login = (props: LoginProps) => {
@@ -64,51 +47,34 @@ export const Login = (props: LoginProps) => {
                         }}
                       >
                         <Form.Item label="Email">
-                          <Field
-                            name="email"
-                            validate={validateEmail}
-                            type={"email"}
-                            render={() => {
-                              return (
-                                <Input
-                                  name="email"
-                                  size="default"
-                                  onBlur={renderProps.handleBlur}
-                                  onChange={renderProps.handleChange}
-                                  defaultValue={renderProps.values.email}
-                                />
-                              );
-                            }}
-                          />
-                          {renderProps.errors.email && renderProps.touched.email && (
-                            <div>{renderProps.errors.email}</div>
-                          )}
+                          {FormKit.input({
+                            name: "email",
+                            renderProps,
+                            validater: FormKit.validater.validateEmail(),
+                            size: "default",
+                            type: "email",
+                          })}
+                          {FormKit.erroeMessage({ name: "email", renderProps })}
                         </Form.Item>
                         <Form.Item label="Password">
-                          <Field
-                            name="password"
-                            validate={validatePaaword}
-                            type={"password"}
-                            render={() => {
-                              return (
-                                <Input
-                                  name="password"
-                                  size="default"
-                                  onBlur={renderProps.handleBlur}
-                                  onChange={renderProps.handleChange}
-                                  defaultValue={renderProps.values.password}
-                                />
-                              );
-                            }}
-                          />
-                          {renderProps.errors.password && renderProps.touched.password && (
-                            <div>{renderProps.errors.password}</div>
-                          )}
+                          {FormKit.input({
+                            name: "password",
+                            renderProps,
+                            validater: FormKit.validater.validatePaaword(),
+                            size: "default",
+                            type: "password",
+                          })}
+                          {FormKit.erroeMessage({ name: "password", renderProps })}
                         </Form.Item>
                         <div className="form-actions">
-                          <Button type="primary" className="width-150 mr-4" htmlType="submit" loading={props.loading}>
-                            Login
-                          </Button>
+                          {FormKit.buttom({
+                            type: "primary",
+                            loading: props.loading,
+                            size: "default",
+                            className: "width-150 mr-4",
+                            htmlType: "submit",
+                            title: "login",
+                          })}
                         </div>
                       </Form>
                     </div>
