@@ -19,7 +19,7 @@ export interface LoginProps {
 export const Login = (props: LoginProps) => {
   return (
     <Formik
-      initialValues={{ email: "email", password: "password", loading: false }}
+      initialValues={{ email: "", password: "", loading: false }}
       onSubmit={(param: FormValues, actions: FormikActions<FormValues>) => {
         props.onSubmit(param);
       }}
