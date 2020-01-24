@@ -7,5 +7,5 @@ test("should message false by password validator", () => {
 
 test("should undefined true by password validator", () => {
   const validatePaawordIns = validatePaaword();
-  expect(validatePaawordIns("")).toBeUndefined();
+  expect(validatePaawordIns("password")).toBeUndefined();
 });
