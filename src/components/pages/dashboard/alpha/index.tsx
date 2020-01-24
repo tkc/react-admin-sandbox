@@ -1,10 +1,10 @@
 import React from "react";
 import { Button, Table } from "antd";
 import { Helmet } from "react-helmet";
-import PaymentAccount from "../../../clean-ui-components/payment-account";
-import PaymentTransaction from "../../../clean-ui-components/payment-transaction";
-import ChartCard from "../../../clean-ui-components/chart-card";
-import { MainLayout, MainLayoutProps } from "../../../layouts/basic";
+import PaymentAccount from "../../../molecules/payment-account";
+import PaymentTransaction from "../../../molecules/payment-transaction";
+import ChartCard from "../../../molecules/chart-card";
+import { MainLayout, MainLayoutProps } from "../../../template/basic";
 
 const tableColumns = [
   {

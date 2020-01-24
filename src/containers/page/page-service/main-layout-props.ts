@@ -2,7 +2,7 @@ import { Dispatch } from "redux";
 import { State } from "../../../reducers";
 import { push } from "connected-react-router";
 import { paths } from "../../../routes/paths";
-import { MainLayoutProps } from "../../../components/layouts/basic";
+import { MainLayoutProps } from "../../../components/template/basic";
 
 export const CreateMenuProps = (state: State, { dispatch }: { dispatch: Dispatch }): MainLayoutProps => {
   return {

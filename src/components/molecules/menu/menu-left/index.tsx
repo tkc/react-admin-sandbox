@@ -3,7 +3,7 @@ import { Menu, Layout } from "antd";
 import { Scrollbars } from "react-custom-scrollbars";
 import _ from "lodash";
 import styles from "./style.module.scss";
-import { paths } from "../../../../../src/routes/paths";
+import { paths } from "../../../../routes/paths";
 
 const { Sider } = Layout;
 

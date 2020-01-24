@@ -1,9 +1,9 @@
 import React from "react";
 import { BackTop, Layout } from "antd";
 import classNames from "classnames";
-import { TopBar, TopBarProps } from "../../layout-components/top-bar";
-import { Menu, MenuProps } from "../../layout-components/menu";
-import Settings from "../../layout-components/settings";
+import { TopBar, TopBarProps } from "../../molecules/top-bar";
+import { Menu, MenuProps } from "../../molecules/menu";
+import Settings from "../../molecules/settings";
 
 export interface OwnState {}
 

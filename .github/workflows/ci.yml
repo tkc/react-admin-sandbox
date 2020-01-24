@@ -23,8 +23,8 @@ jobs:
         run: yarn tsc     
       - name: Lint
         run: yarn lint
-      # - name: Test
-        # run: yarn test    
+      - name: Test
+        run: yarn test    
       - name: Build development
         run: yarn build
       - name: Build production
