@@ -21,7 +21,7 @@ export function AccountForm(props: AccountFormProps) {
     <>
       <Helmet title="Product Edit" />
       <Formik
-        initialValues={{ name: "name", description: "password", size: "size", loading: false }}
+        initialValues={{ name: "name", description: "description", size: "size", loading: false }}
         onSubmit={(param: FormValues, actions: FormikActions<FormValues>) => {
           // props.onSubmit(param);
         }}
@@ -45,6 +45,7 @@ export function AccountForm(props: AccountFormProps) {
                           size: "default",
                           type: "text",
                           placeholder: "Product title",
+                          defaultValue: "name",
                         })}
                         {FormKit.erroeMessage({ name: "name", renderProps })}
                       </Form.Item>
@@ -60,6 +61,7 @@ export function AccountForm(props: AccountFormProps) {
                           rows: 3,
                           type: "text",
                           placeholder: "",
+                          defaultValue: "description",
                         })}
                         {FormKit.erroeMessage({ name: "description", renderProps })}
                       </FormItem>
@@ -74,8 +76,6 @@ export function AccountForm(props: AccountFormProps) {
                             {FormKit.selectInput({
                               name: "colors",
                               renderProps,
-                              validater: FormKit.validater.validateSimplaInput(100),
-                              defaultValue: "red",
                               placeholder: "Select a color",
                               options: [
                                 { key: "blue", value: "blue" },
