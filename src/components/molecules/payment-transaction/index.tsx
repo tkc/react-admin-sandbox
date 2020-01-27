@@ -10,30 +10,21 @@ export interface PaymentTransactionProps {
   footer: string;
 }
 
-class PaymentTransaction extends React.Component<PaymentTransactionProps, OwnState> {
-  constructor(props: PaymentTransactionProps) {
-    super(props);
-  }
-
-  render() {
-    return (
-      <a
-        href=""
-        className={`${styles.paymentTransaction} card card--withShadow ${this.props.income ? styles.income : ""}`}
-      >
-        <div className={styles.icon}>
-          <i className={this.props.income ? "lnr lnr-arrow-left" : "lnr lnr-arrow-right"} />
+function PaymentTransaction(props: PaymentTransactionProps) {
+  return (
+    <a href="" className={`${styles.paymentTransaction} card card--withShadow ${props.income ? styles.income : ""}`}>
+      <div className={styles.icon}>
+        <i className={props.income ? "lnr lnr-arrow-left" : "lnr lnr-arrow-right"} />
+      </div>
+      {props.amount && (
+        <div>
+          <span className={styles.amount}>{props.amount}</span>
+          {props.amount && <sup className={styles.info}>{props.info}</sup>}
         </div>
-        {this.props.amount && (
-          <div>
-            <span className={styles.amount}>{this.props.amount}</span>
-            {this.props.amount && <sup className={styles.info}>{this.props.info}</sup>}
-          </div>
-        )}
-        {this.props.footer && <div className={styles.footer}>{this.props.footer}</div>}
-      </a>
-    );
-  }
+      )}
+      {props.footer && <div className={styles.footer}>{props.footer}</div>}
+    </a>
+  );
 }
 
 export default PaymentTransaction;

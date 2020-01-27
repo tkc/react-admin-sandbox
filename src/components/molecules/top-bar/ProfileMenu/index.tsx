@@ -11,49 +11,43 @@ export interface ProfileMenuProps {
   logout: () => void;
 }
 
-export class ProfileMenu extends React.Component<ProfileMenuProps, OwnState> {
-  constructor(props: ProfileMenuProps) {
-    super(props);
-  }
-
-  render() {
-    const menu = (
-      <Menu selectable={false}>
-        <Menu.Item>
-          <div>
-            <strong>Name : </strong>
-            {this.props.user.name}
-          </div>
-          <div>
-            <strong>Role : </strong>
-            {this.props.user.role}
-          </div>
-        </Menu.Item>
-        <Menu.Divider />
-        <Menu.Item>
-          <div>
-            <strong>Email : </strong>
-            {this.props.user.email}
-          </div>
-        </Menu.Item>
-        <Menu.Divider />
-        <Menu.Item>
-          <a href="" onClick={this.props.logout}>
-            <i className={`${styles.menuIcon} icmn-exit`} />
-            logout
-          </a>
-        </Menu.Item>
-      </Menu>
-    );
-
-    return (
-      <Dropdown overlay={menu} trigger={["click"]}>
-        <div className={styles.dropdown}>
-          <Badge count={this.props.badgeCount}>
-            <Avatar className={styles.avatar} shape="square" size="large" icon="user" />
-          </Badge>
+export function ProfileMenu(props: ProfileMenuProps) {
+  const menu = (
+    <Menu selectable={false}>
+      <Menu.Item>
+        <div>
+          <strong>Name : </strong>
+          {props.user.name}
         </div>
-      </Dropdown>
-    );
-  }
+        <div>
+          <strong>Role : </strong>
+          {props.user.role}
+        </div>
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item>
+        <div>
+          <strong>Email : </strong>
+          {props.user.email}
+        </div>
+      </Menu.Item>
+      <Menu.Divider />
+      <Menu.Item>
+        <a href="" onClick={props.logout}>
+          <i className={`${styles.menuIcon} icmn-exit`} />
+          logout
+        </a>
+      </Menu.Item>
+    </Menu>
+  );
+
+  return (
+    <Dropdown overlay={menu} trigger={["click"]}>
+      <div className={styles.dropdown}>
+        <Badge count={props.badgeCount}>
+          <Avatar className={styles.avatar} shape="square" size="large" icon="user" />
+        </Badge>
+      </div>
+    </Dropdown>
+  );
 }

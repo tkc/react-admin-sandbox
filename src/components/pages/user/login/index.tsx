@@ -16,7 +16,7 @@ export interface LoginProps {
   loading: boolean;
 }
 
-export const Login = (props: LoginProps) => {
+export function Login(props: LoginProps) {
   return (
     <Formik
       initialValues={{ email: "", password: "", loading: false }}
@@ -89,4 +89,4 @@ export const Login = (props: LoginProps) => {
       )}
     />
   );
-};
+}
