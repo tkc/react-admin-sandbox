@@ -8,11 +8,6 @@ export interface AccountEditBoxProps {
   formData: {};
 }
 
-export class AccountEditBox extends React.Component<AccountEditBoxProps, OwnState> {
-  constructor(props: AccountEditBoxProps) {
-    super(props);
-  }
-  render() {
-    return <div className="row"></div>;
-  }
+function AccountEditBox(props: AccountEditBoxProps) {
+  return <div className="row"></div>;
 }

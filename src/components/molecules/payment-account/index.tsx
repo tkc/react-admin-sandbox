@@ -10,24 +10,19 @@ export interface PaymentAccountProps {
   footer: string;
 }
 
-class PaymentAccount extends React.Component<PaymentAccountProps, OwnState> {
-  constructor(props: PaymentAccountProps) {
-    super(props);
-  }
-  render() {
-    return (
-      <a href="" className={`card card--withShadow ${styles.account}`}>
-        {this.props.icon && (
-          <div className={styles.icon}>
-            <i className={this.props.icon} />
-          </div>
-        )}
-        {this.props.number && <span className={styles.number}>{this.props.number}</span>}
-        {this.props.sum && <span className={styles.sum}>{this.props.sum}</span>}
-        {this.props.footer && <div className={styles.footer}>{this.props.footer}</div>}
-      </a>
-    );
-  }
+function PaymentAccount(props: PaymentAccountProps) {
+  return (
+    <a href="" className={`card card--withShadow ${styles.account}`}>
+      {props.icon && (
+        <div className={styles.icon}>
+          <i className={props.icon} />
+        </div>
+      )}
+      {props.number && <span className={styles.number}>{props.number}</span>}
+      {props.sum && <span className={styles.sum}>{props.sum}</span>}
+      {props.footer && <div className={styles.footer}>{props.footer}</div>}
+    </a>
+  );
 }
 
 export default PaymentAccount;
