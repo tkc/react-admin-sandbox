@@ -1,5 +1,5 @@
 import React from "react";
-import * as types from "types";
+import * as types from "types/appType";
 import { Button } from "antd";
 import { Pagination } from "antd";
 import styles from "./style.module.scss";

@@ -1,7 +1,7 @@
 import { Actions } from "../../actions";
 import { initActionType } from "../../actions/init";
 import * as UserActions from "../../actions/user";
-import * as Models from "../../../models/index";
+import * as Models from "types/models";
 
 export type User = {
   loading: boolean;

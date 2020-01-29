@@ -1,4 +1,5 @@
 import { $ActionType } from ".";
+import * as models from "types/models";
 
 // login
 export const AuthLoginRequestActionType = "AUTH/LOGIN-REQUEST";
@@ -41,10 +42,10 @@ export type AuthLoginSuccessAction = $ActionType<
   typeof AuthLoginSuccessActionType,
   ReturnType<typeof AuthLoginSuccess>["payload"]
 >;
-export function AuthLoginSuccess() {
+export function AuthLoginSuccess(payload: models.User) {
   return {
     type: AuthLoginSuccessActionType,
-    payload: null,
+    payload,
   };
 }
 

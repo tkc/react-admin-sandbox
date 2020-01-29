@@ -1,12 +1,12 @@
 import React from "react";
 import { Menu, Dropdown, Avatar, Badge } from "antd";
 import styles from "./style.module.scss";
-import * as types from "types";
+import * as models from "types/models";
 
 export interface OwnState {}
 
 export interface ProfileMenuProps {
-  user: types.UserType;
+  user: models.User;
   badgeCount: number;
   logout: () => void;
 }
