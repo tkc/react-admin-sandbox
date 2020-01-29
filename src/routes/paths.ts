@@ -1,4 +1,4 @@
-import { MenuItemType } from "types";
+import { MenuItemType } from "types/appType";
 
 export const paths: {
   [key: string]: MenuItemType;

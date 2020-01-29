@@ -1,5 +1,5 @@
 import { $ActionType } from ".";
-import * as models from "models";
+import * as models from "types/models";
 
 export const UserCreateRequestActionType = "USERCREATE/REQUEST";
 export const UserCreateSuccessActionType = "USERCREATE/SUCCESS";

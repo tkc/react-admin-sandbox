@@ -41,8 +41,9 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.jsx', '.js'],
     alias: {
       src: path.resolve (__dirname, './src'),
-      types: path.resolve (__dirname, './types'),
-      models: path.resolve (__dirname, './models'),
+      appTypes: path.resolve (__dirname, './types/app/'),
+      modelTypes: path.resolve (__dirname, './types/models/'),
+      payloadTypes: path.resolve (__dirname, './types/payloads/'),
       assets: path.resolve (__dirname, './assets'),
       mock: path.resolve (__dirname, './mock'),
       usecase: path.resolve (__dirname, './src/usecase/'),
