@@ -15,35 +15,31 @@ export interface MainLayoutProps {
   isMenuTop: boolean;
   topBarProps: TopBarProps;
   menuProps: MenuProps;
+  children?: React.ReactNode;
 }
 
-export class MainLayout extends React.PureComponent<MainLayoutProps, OwnState> {
-  constructor(props: MainLayoutProps) {
-    super(props);
-  }
-  render() {
-    return (
-      <Layout
-        className={classNames({
-          settings__borderLess: this.props.isBorderless,
-          settings__squaredBorders: this.props.isSquaredBorders,
-          settings__fixedWidth: this.props.isFixedWidth,
-          settings__menuShadow: this.props.isMenuShadow,
-          settings__menuTop: this.props.isMenuTop,
-        })}
-      >
-        <BackTop />
-        <Menu {...this.props.menuProps} />
-        <Settings />
-        <Layout>
-          <Layout.Header style={{ padding: "0%" }}>
-            <TopBar {...this.props.topBarProps} />
-          </Layout.Header>
-          <Layout.Content style={{ height: "100%", position: "relative" }}>
-            <div className="utils__content">{this.props.children}</div>
-          </Layout.Content>
-        </Layout>
+export function MainLayout(props: MainLayoutProps) {
+  return (
+    <Layout
+      className={classNames({
+        settings__borderLess: props.isBorderless,
+        settings__squaredBorders: props.isSquaredBorders,
+        settings__fixedWidth: props.isFixedWidth,
+        settings__menuShadow: props.isMenuShadow,
+        settings__menuTop: props.isMenuTop,
+      })}
+    >
+      <BackTop />
+      <Menu {...props.menuProps} />
+      <Settings />
+      <Layout>
+        <Layout.Header style={{ padding: "0%" }}>
+          <TopBar {...props.topBarProps} />
+        </Layout.Header>
+        <Layout.Content style={{ height: "100%", position: "relative" }}>
+          <div className="utils__content">{props.children}</div>
+        </Layout.Content>
       </Layout>
-    );
-  }
+    </Layout>
+  );
 }

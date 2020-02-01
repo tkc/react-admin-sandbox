@@ -19,16 +19,14 @@ export interface MenuLeftProps {
   onClick: (path: string) => void;
 }
 
-export class MenuLeft extends React.Component<MenuLeftProps, OwnState> {
+export class MenuLeft extends React.PureComponent<MenuLeftProps, OwnState> {
   constructor(props: MenuLeftProps) {
     super(props);
     this.state = { selectedKeys: "", openedKeys: "" };
   }
-
   componentWillMount() {
     this.setSelectedKeys(this.props);
   }
-
   componentWillReceiveProps(newProps: any) {
     if (newProps.isMenuCollapsed && !newProps.isMobileView) {
       this.setState({ openedKeys: [] });

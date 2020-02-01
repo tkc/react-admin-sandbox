@@ -4,7 +4,7 @@ import { push } from "connected-react-router";
 import { paths } from "../../../routes/paths";
 import { MainLayoutProps } from "../../../components/template/basic";
 
-export const CreateMenuProps = (state: State, { dispatch }: { dispatch: Dispatch }): MainLayoutProps => {
+export function CreateMenuProps(state: State, { dispatch }: { dispatch: Dispatch }): MainLayoutProps {
   return {
     isBorderless: true,
     isSquaredBorders: true,
@@ -39,4 +39,4 @@ export const CreateMenuProps = (state: State, { dispatch }: { dispatch: Dispatch
       },
     },
   };
-};
+}
